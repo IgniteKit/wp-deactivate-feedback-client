@@ -1,0 +1,24 @@
+.iwpdf-modal__footer .button-link {
+    text-decoration: none;
+    padding: 5px;
+    line-height: 2.15384615;
+}
+.iwpdf-modal__footer .button-link, .iwpdf-modal__footer .button-secondary {
+    float: right;
+}
+
+.iwpdf-form-row {
+    margin-bottom: 5px;
+}
+
+.iwpdf-subfield {
+    padding-left: 19px;
+    margin-top: 3px;
+}
+
+.iwpdf-subfield input[type=text] {
+    width: 100%;
+}
+.iwpdf--has-text:not(.iwpdf-form-row-current) .iwpdf-subfield {
+    display:none;
+}

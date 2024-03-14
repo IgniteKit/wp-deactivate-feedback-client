@@ -1,0 +1,19 @@
+{
+  "name": "ignitekit/wp-deactivate-feedback-client",
+  "description": "Collect website owner's feedback on plugin deactivation.",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "email": "dg@darkog.com",
+      "name": "Darko Gjorgjijoski"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "IgniteKit\\WP\\DeactivateFeedbackClient\\": "src"
+    }
+  },
+  "require": {
+    "php": ">=5.3"
+  }
+}
