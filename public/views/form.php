@@ -44,7 +44,7 @@ $url = add_query_arg( [
             </header>
             <form method="POST" action="<?php echo esc_url( $url ); ?>" id="<?php esc_attr_e( $id ); ?>--form">
                 <main class="iwpdf-modal__content" id="<?php esc_attr_e( $id ); ?>--content">
-                    <p>
+                    <p class="iwpdf-modal__content-intro">
 						<?php echo sprintf( $configuration->getTranslated( 'form_description' ), $configuration->name ); ?>
                     </p>
                     <div class="iwpdf-form">

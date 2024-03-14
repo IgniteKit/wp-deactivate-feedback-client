@@ -40,9 +40,8 @@ class Feedback extends AbstractFeedback {
 
 		if ( ! wp_script_is( 'ignitekit-wpdf', 'registered' ) ) {
 			wp_register_script( 'ignitekit-micromodal', $this->configuration->public_url . 'assets/micromodal/micromodal.min.js', [], null, false );
-			wp_register_style( 'ignitekit-micromodal', $this->configuration->public_url . 'assets/micromodal/micromodal.css', [], null, 'all' );
 			wp_register_script( 'ignitekit-wpdf', $this->configuration->public_url . 'assets/script.js', [ 'ignitekit-micromodal' ], '1.0.0', true );
-			wp_register_style( 'ignitekit-wpdf', $this->configuration->public_url . 'assets/style.css', [ 'ignitekit-micromodal' ], '1.0.0', 'all' );
+			wp_register_style( 'ignitekit-wpdf', $this->configuration->public_url . 'assets/style.css', [], '1.0.0', 'all' );
 		}
 
 		wp_enqueue_style( 'ignitekit-wpdf' );
