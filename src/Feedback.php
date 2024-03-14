@@ -76,20 +76,35 @@ class Feedback extends AbstractFeedback {
 
 		if ( ! check_ajax_referer( $this->configuration->getNonceKey(), '_wpnonce', false ) ) {
 			wp_send_json_error( [ 'message' => 'Permission denied (1)' ] );
+			exit;
 		}
 
 		if ( ! current_user_can( 'activate_plugins' ) ) {
 			wp_send_json_error( [ 'message' => 'Permission denied (2)' ] );
+			exit;
 		}
 
 		$deactivation_reason = isset( $_POST['deactivation_reason'] ) ? sanitize_text_field( $_POST['deactivation_reason'] ) : '';
 		$additional_feedback = isset( $_POST[ $deactivation_reason . '_additional_feedback' ] ) ? sanitize_text_field( $_POST[ $deactivation_reason . '_additional_feedback' ] ) : '';
 
+		$deactivation_reason_title = '';
+		foreach($this->configuration->reasons as $value) {
+			if($value['id'] === $deactivation_reason) {
+				$deactivation_reason_title = $value['title'];
+			}
+		}
+
+		if ( empty( $deactivation_reason_title ) ) {
+			wp_send_json_error( [ 'message' => 'Reason not found' ] );
+			exit;
+		}
+
 		$feedback = [
-			'reason'      => $deactivation_reason,
-			'reason_text' => $additional_feedback,
-			'plugin'  => $this->configuration->slug,
-			'version' => $this->configuration->version,
+			'reason_key'   => $deactivation_reason,
+			'reason_title' => $deactivation_reason_title,
+			'reason_text'  => $additional_feedback,
+			'plugin'       => $this->configuration->slug,
+			'version'      => $this->configuration->version,
 		];
 
 		foreach ( $this->configuration->data as $key ) {
