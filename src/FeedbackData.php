@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License v3
  * along with this program;
  *
- * If not, see: https://www.gnu.org/licenses/gpl-3.0.en.html
+ * If not, see: https://www.gnu.org/licenses/gpl-2.0.en.html
  *
  * Code written, maintained by Darko Gjorgjijoski (https://darkog.com)
  */

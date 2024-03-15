@@ -4,6 +4,8 @@ Easy to use WordPress package for collecting feedback on plugin deactivation.
 
 The library allows toe developers to set up feedback form that shows on plugin deactivation on the Plugins page.
 
+![plugin-deactivate](https://github.com/IgniteKit/wp-deactivate-feedback/assets/5760249/d9f2daa3-37da-48c3-b9c9-cf2c50ac5f6b)
+
 ## Quick Start
 
 ### 1. How to install
@@ -39,6 +41,10 @@ To collect data, you can use our plugin **WP Deactivate Feedback**.
 
 [[Get Started]](https://github.com/ignitekit/wp-deactivate-feedback/)
 
+## Contributions
+
+Contributions are welcome here. If you have any ideas or found bugs, please open a pull request or issue.
+
 ## License
 
 ```
@@ -59,7 +65,7 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License v3
 along with this program;
 
-If not, see: https://www.gnu.org/licenses/gpl-3.0.en.html
+If not, see: https://www.gnu.org/licenses/gpl-2.0.en.html
 
 Code written, maintained by Darko Gjorgjijoski (https://darkog.com)
 ```
