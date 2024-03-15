@@ -68,7 +68,7 @@ $url = add_query_arg( [
                     </div>
                 </main>
                 <footer class="iwpdf-modal__footer">
-                    <button type="submit" class="iwpdf-form-submit button-primary"><?php echo esc_attr( $configuration->getTranslated( 'button_submit_deactivate' ) ); ?></button>
+                    <button type="submit" class="iwpdf-form-submit button-primary"><span class="dashicons dashicons-update iwpdf-spin"></span><?php echo esc_attr( $configuration->getTranslated( 'button_submit_deactivate' ) ); ?></button>
                     <button type="button" class="iwpdf-deactivate button-secondary"><?php echo esc_attr( $configuration->getTranslated( 'button_skip_deactivate' ) ); ?></button>
                 </footer>
             </form>

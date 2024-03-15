@@ -181,3 +181,25 @@
     margin-bottom: 20px;
     margin-top: 15px
 }
+.iwpdf-modal__container form:not(.iwpdf-form-loading) .iwpdf-spin {
+    display:none;
+}
+.iwpdf-spin {
+    animation: iwpdf-dashicons-spin 1s infinite;
+    animation-timing-function: linear;
+}
+
+.iwpdf-form-submit .dashicons {
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+
+@keyframes iwpdf-dashicons-spin {
+    0% {
+        transform: rotate( 0deg );
+    }
+    100% {
+        transform: rotate( 360deg );
+    }
+}

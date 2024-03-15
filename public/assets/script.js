@@ -97,12 +97,28 @@ IgniteKitDeactivateFeedback.FormHandler.prototype.start = function () {
     var FormDeactivate = document.getElementById(self.prefix + 'deactivate_feedback--form');
     FormDeactivate.addEventListener('submit', function (e) {
         e.preventDefault();
+        var form = FormDeactivate.closest('form');
+        if (form) {
+            form.classList.add('iwpdf-form-loading')
+        }
+        var button = FormDeactivate.querySelector('.iwpdf-form-submit');
+        if (button) {
+            button.setAttribute('disabled', '');
+        }
         var formData = new FormData(this);
         var httpReq = new XMLHttpRequest();
         httpReq.open('POST', FormDeactivate.action, true);
         httpReq.onreadystatechange = function () {
             if (httpReq.readyState === 4) {
                 self.deactivatePlugin();
+                setTimeout(function(){
+                    if (form) {
+                        form.classList.remove('iwpdf-form-loading');
+                    }
+                    if (button) {
+                        button.removeAttribute('disabled');
+                    }
+                },2000);
             }
         };
         httpReq.send(formData);
