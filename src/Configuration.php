@@ -62,6 +62,7 @@ class Configuration {
 			'reason_found_better_plugin_text' => 'Please share which plugin',
 			'reason_no_longer_needed'         => 'I no longer need the plugin',
 			'reason_does_not_work'            => 'I couldn\'t get the plugin to work',
+			'reason_does_not_work_text'       => 'Please share more details about the issue',
 			'reason_other'                    => 'Other',
 			'reason_other_text'               => 'Please share the reason',
 		] );
@@ -166,6 +167,10 @@ class Configuration {
 			[
 				'id'    => 'does_not_work',
 				'title' => $this->i18n['reason_does_not_work'],
+				'text'  => [
+					'enabled'     => true,
+					'placeholder' => $this->i18n['reason_does_not_work_text'],
+				],
 			],
 			[
 				'id'    => 'other',
